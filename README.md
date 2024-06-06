@@ -16,7 +16,9 @@ Fake Payment Server
       -d DATA, --data DATA  JSON string containing enforced values 
       
 example :  `python3 fake_payement_endpoint.py -p 8080 -c 201 -m "New Payment Success" -a country,method -d '{"currency": "EUR", "method": "cash"}'`
+
 testing : `curl -X POST -H "Content-Type: application/json" -d '{"amount":100.0,"country":"France","currency":"EUR","method":"cash","transaction_id":"1234567890"}' http://localhost:8080`
+
 response : 
 `{
     "amount": 100.0,
